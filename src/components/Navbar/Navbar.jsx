@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Navbar.css";
 import { list } from "postcss";
 import Link from "./Link/Link";
-import { BeakerIcon, Bars3Icon } from "@heroicons/react/24/solid";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 
 const Navbar = () => {
 	const [open, setOpen] = useState(false);
@@ -31,12 +31,21 @@ const Navbar = () => {
 	];
 
 	return (
-		<nav>
-			<div onClick={() => setOpen(!open)}>
-				<Bars3Icon className='h-6 w-6 text-purple-500' />
-				<span>{open == true ? "open" : "close"}</span>
+		<nav className='bg-purple-400'>
+			<div onClick={() => setOpen(!open)} className='md:hidden'>
+				<span>
+					{open == true ? (
+						<XMarkIcon className='h-6 w-6 text-purple-500' />
+					) : (
+						<Bars3Icon className='h-6 w-6 text-purple-500' />
+					)}
+				</span>
 			</div>
-			<ul className='md:flex'>
+			<ul
+				className={`md:flex ${
+					open ? "top-6" : "-top-96"
+				} absolute duration-500 md:static bg-purple-300 py-2`}
+			>
 				{routes.map((route) => (
 					<Link key={route.id} route={route}></Link>
 				))}
