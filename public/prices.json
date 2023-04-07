@@ -1,0 +1,29 @@
+[
+	{
+		"id": 1,
+		"name": "Monthly",
+		"duration": "1 month",
+		"price": 50,
+		"features": ["Gym access", "Group classes", "Locker room"]
+	},
+	{
+		"id": 2,
+		"name": "Quarterly",
+		"duration": "3 months",
+		"price": 135,
+		"features": ["Gym access", "Group classes", "Locker room", "Sauna"]
+	},
+	{
+		"id": 3,
+		"name": "Yearly",
+		"duration": "12 months",
+		"price": 500,
+		"features": [
+			"Gym access",
+			"Group classes",
+			"Locker room",
+			"Sauna",
+			"Personal trainer"
+		]
+	}
+]
