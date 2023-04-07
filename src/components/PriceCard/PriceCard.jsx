@@ -2,7 +2,7 @@ import React from "react";
 import Feature from "../Feature/Feature";
 const PriceCard = (props) => {
 	const { name, price, features } = props.price;
-	console.log(props);
+	// console.log(props);
 	return (
 		<div className='bg-indigo-300 mt-10 rounded-xl p-5 flex flex-col '>
 			<h2 className='text-center'>
