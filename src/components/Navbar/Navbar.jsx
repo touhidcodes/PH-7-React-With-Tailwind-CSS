@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import { list } from "postcss";
 import Link from "./Link/Link";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-
 const Navbar = () => {
 	const [open, setOpen] = useState(false);
 	const routes = [
